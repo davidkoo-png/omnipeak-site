@@ -1,0 +1,27 @@
+---
+interface Props {
+  title?: string;
+  text?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+}
+
+const {
+  title = 'Tell Omnipeak what your business needs to run on',
+  text = 'A 20-minute call, in plain language, about what you have now and what it should be doing instead. No pitch deck, no obligation.',
+  secondaryLabel = 'See how projects run',
+  secondaryHref = '/process/',
+} = Astro.props;
+---
+
+<section class="section section--dark">
+  <div class="container">
+    <span class="eyebrow">Next step</span>
+    <h2>{title}</h2>
+    <p class="lede">{text}</p>
+    <div class="btn-row">
+      <a href="/contact/" class="btn btn--primary">Book an intro call</a>
+      <a href={secondaryHref} class="btn btn--ghost">{secondaryLabel}</a>
+    </div>
+  </div>
+</section>

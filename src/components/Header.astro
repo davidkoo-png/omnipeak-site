@@ -1,0 +1,63 @@
+---
+const links = [
+  { href: '/services/', label: 'Services' },
+  { href: '/work/', label: 'Work' },
+  { href: '/process/', label: 'Process' },
+  { href: '/about/', label: 'About' },
+];
+
+const current = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isActive = (href: string) => href.replace(/\/$/, '') === current;
+---
+
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="/" class="logo" aria-label="Omnipeak — home">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M2.5 19L9.5 5.5L13.5 13L16.5 8.5L21.5 19"
+            stroke="#1e4433"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        Omnipeak
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav__list" id="nav-menu">
+          {
+            links.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class:list={['nav__link', { 'nav__link--active': isActive(link.href) }]}
+                  aria-current={isActive(link.href) ? 'page' : undefined}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+          <li><a href="/contact/" class="btn btn--primary nav__cta">Book a call</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector('.nav__toggle');
+  const menu = document.getElementById('nav-menu');
+  toggle?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(Boolean(open)));
+  });
+</script>

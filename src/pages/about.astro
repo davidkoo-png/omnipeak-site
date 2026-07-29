@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<BaseLayout
+  title="About — Omnipeak"
+  description="Omnipeak is the engineering practice of David — a software engineer in the Los Angeles / Orange County area building booking, membership, and billing systems for small businesses."
+>
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">About</span>
+      <h1>The person building your system</h1>
+      <p class="lede">
+        Omnipeak is the engineering practice of David — a software engineer based in the Los
+        Angeles / Orange County area, currently completing a master's in computer science at
+        Georgia Tech.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--rule">
+    <div class="container">
+      <div class="prose">
+        <h2>Why the direct model works</h2>
+        <p>
+          When you hire Omnipeak, the person you talk to is the person writing the code. That
+          isn't a limitation — it's the point. Nothing gets handed to a junior developer, no
+          requirement gets lost between an account manager and an engineering team, and
+          decisions that would take an agency a week of internal meetings happen in one
+          conversation with you.
+        </p>
+        <p>
+          The whole stack is owned end to end — from designing the database your business
+          records live in, through the software itself, to deployment and keeping it running.
+          One person accountable for all of it means there's never a layer to hide behind when
+          something needs fixing.
+        </p>
+
+        <h2>Deliberately boring technology</h2>
+        <p>
+          Omnipeak builds on proven, widely used technology — TypeScript, PostgreSQL, and
+          Stripe — chosen precisely because tens of thousands of developers know it. That's
+          your protection: if you ever want someone else to maintain your system, you'll be
+          able to find them. Clever, obscure technology is a form of lock-in; Omnipeak doesn't
+          use it.
+        </p>
+
+        <h2>Why bookings and memberships</h2>
+        <p>
+          Reservation and billing systems look simple and aren't. Time-slot logic, recurring
+          payments, failed charges, memberships that pause and resume — this is exactly where
+          off-the-shelf tools run out and where half-finished custom projects tend to die.
+          Specializing here means those problems have already been solved once before your
+          project starts.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>
