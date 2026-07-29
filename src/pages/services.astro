@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<BaseLayout
+  title="Services — Omnipeak"
+  description="Booking and membership systems, rescue of stalled software projects, process automation, and internal tools — fixed-scope projects with defined deliverables."
+>
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Services</span>
+      <h1>What Omnipeak builds</h1>
+      <p class="lede">
+        Four kinds of work, all delivered the same way: a fixed scope, a defined set of
+        deliverables, and a system you own and can run yourself.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--rule">
+    <div class="container">
+      <div class="rows">
+        <div class="row">
+          <h3>Booking, membership &amp; billing systems</h3>
+          <div class="row__body">
+            <p>
+              The core specialty. Systems for businesses that run on reservations, recurring
+              memberships, and recurring payments — built around how your business actually
+              prices and schedules, not how an off-the-shelf app assumes you do.
+            </p>
+            <ul>
+              <li>Reservations and slot logic, including time-based and peak pricing</li>
+              <li>Memberships with recurring billing, pauses, and cancellations</li>
+              <li>Payments through Stripe, in your own Stripe account</li>
+              <li>Multi-location support when you're ready to grow</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <h3>Rescuing stalled projects</h3>
+          <div class="row__body">
+            <p>
+              For owners who paid for software and got a half-finished system — or a finished
+              one nobody can maintain. Omnipeak reads the existing code, gives you an honest
+              written assessment of what's salvageable, and then either finishes it or rebuilds
+              it. Either way, you get a clear answer before any building starts.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <h3>Process automation</h3>
+          <div class="row__body">
+            <p>
+              The work your staff does by hand every week — copying bookings between systems,
+              chasing failed payments, sending the same reminder emails — replaced with
+              software that does it on schedule, every time.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <h3>Internal tools &amp; admin dashboards</h3>
+          <div class="row__body">
+            <p>
+              The numbers you check every morning and the records your staff updates all day,
+              in one place — instead of scattered across spreadsheets, inboxes, and someone's
+              memory.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <h3>Ongoing maintenance</h3>
+          <div class="row__body">
+            <p>
+              After launch, Omnipeak can keep improving and maintaining your system for as long
+              as you want — or hand it off cleanly to anyone you choose. The documentation and
+              ownership terms make both options real.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dim">
+    <div class="container">
+      <SectionHeader
+        eyebrow="Engagement model"
+        title="Fixed scope, defined deliverables"
+        subtitle="Every project starts with a written proposal: what will be built, what it will cost, and when it will be done. Not hourly billing, not open-ended retainers — you know the number before work begins."
+      />
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>

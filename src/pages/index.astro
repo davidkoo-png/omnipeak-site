@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<BaseLayout
+  title="Omnipeak — Booking, membership & billing systems for small businesses"
+  description="Omnipeak builds reservation, membership, and billing systems for gyms, studios, golf simulators, salons, and clinics — and finishes projects other developers left half-done."
+>
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <span class="eyebrow">Booking · Memberships · Billing</span>
+          <h1>Software for businesses that run on bookings.</h1>
+          <p class="lede">
+            Omnipeak designs and builds reservation, membership, and billing systems for
+            appointment-based businesses — and finishes the projects other developers left
+            half-done. You'll work directly with the engineer building your system, and you'll
+            own every piece of it.
+          </p>
+          <div class="btn-row">
+            <a href="/contact/" class="btn btn--primary">Book an intro call</a>
+            <a href="/work/" class="btn btn--ghost">See the work</a>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="sheet">
+            <div class="sheet__head">
+              <span></span>
+              <span>Bay 1</span>
+              <span>Bay 2</span>
+              <span>Bay 3</span>
+            </div>
+            <div class="sheet__row">
+              <span class="sheet__time">9:00</span>
+              <span class="sheet__slot sheet__slot--booked">Booked</span>
+              <span class="sheet__slot"></span>
+              <span class="sheet__slot sheet__slot--member">Member</span>
+            </div>
+            <div class="sheet__row">
+              <span class="sheet__time">10:00</span>
+              <span class="sheet__slot"></span>
+              <span class="sheet__slot sheet__slot--booked">Booked</span>
+              <span class="sheet__slot sheet__slot--member">Member</span>
+            </div>
+            <div class="sheet__row">
+              <span class="sheet__time">11:00</span>
+              <span class="sheet__slot sheet__slot--member">Member</span>
+              <span class="sheet__slot sheet__slot--booked">Booked</span>
+              <span class="sheet__slot"></span>
+            </div>
+            <div class="sheet__row">
+              <span class="sheet__time">12:00</span>
+              <span class="sheet__slot sheet__slot--booked">League</span>
+              <span class="sheet__slot"></span>
+              <span class="sheet__slot sheet__slot--booked">Booked</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dim">
+    <div class="container">
+      <SectionHeader
+        eyebrow="Who this is for"
+        title="Appointment businesses that outgrew their tools"
+        subtitle="Owners and operations leads who are past what spreadsheets and off-the-shelf booking apps can handle — or who inherited a half-finished system from a developer who left."
+      />
+      <ul class="clients">
+        <li>Golf simulators</li>
+        <li>Gyms &amp; studios</li>
+        <li>Salons &amp; spas</li>
+        <li>Tutoring centers</li>
+        <li>Rental businesses</li>
+        <li>Clinics</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--rule">
+    <div class="container">
+      <SectionHeader
+        eyebrow="The ground rules"
+        title="How you're protected"
+        subtitle="Most clients come to Omnipeak after a bad experience with a developer. These four rules apply to every project, in writing."
+      />
+      <div class="grid grid--2">
+        <div class="card">
+          <h3>You own everything</h3>
+          <p>
+            The code, the repository, the hosting, and the payment accounts are in your name
+            from day one. Nothing is held hostage if you ever part ways.
+          </p>
+        </div>
+        <div class="card">
+          <h3>You can run it</h3>
+          <p>
+            Every system ships with an admin screen built for a non-technical owner — change
+            prices, manage members, and see your schedule without calling a developer.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Documented handover</h3>
+          <p>
+            Written documentation comes with the system, so any competent developer could pick
+            it up tomorrow. You are never dependent on one person's memory.
+          </p>
+        </div>
+        <div class="card">
+          <h3>No lock-in</h3>
+          <p>
+            No proprietary platform and no monthly fee just to keep your own software running.
+            Ongoing maintenance is available for as long as you want it — and optional.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--rule">
+    <div class="container">
+      <SectionHeader
+        eyebrow="Recent work"
+        title="The third attempt that shipped"
+        subtitle="A multi-location golf simulator business hired Omnipeak after two previous developers failed to finish their booking platform. The rebuild handles reservations with time-based pricing, memberships with recurring billing, and is structured for franchise growth."
+      />
+      <a href="/work/" class="btn btn--ghost">Read the case study</a>
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>

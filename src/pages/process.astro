@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<BaseLayout
+  title="Process — Omnipeak"
+  description="How an Omnipeak project runs, start to finish — and straight answers to the three questions every owner asks before hiring a developer again."
+>
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Process</span>
+      <h1>How a project runs</h1>
+      <p class="lede">
+        Five steps, in plain language. The short version: you'll know the scope, the price,
+        and the timeline in writing before anything is built — and you'll own the result.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--rule">
+    <div class="container">
+      <ol class="steps">
+        <li class="step">
+          <div>
+            <h3>Intro call</h3>
+            <p>
+              Twenty minutes on how your business runs today and where it hurts. Plain
+              language, no jargon, no pitch. If Omnipeak isn't the right fit, you'll hear that
+              on this call too.
+            </p>
+          </div>
+        </li>
+        <li class="step">
+          <div>
+            <h3>Scope and written proposal</h3>
+            <p>
+              You get a written proposal: exactly what will be built, what it will cost, and
+              when it will be delivered. Fixed scope, fixed price. If you're rescuing an
+              existing system, this step starts with a written assessment of what you already
+              have.
+            </p>
+          </div>
+        </li>
+        <li class="step">
+          <div>
+            <h3>Build</h3>
+            <p>
+              You work directly with the engineer building your system — no account manager in
+              between, no junior doing the real work. You see working software as it takes
+              shape, not a big reveal at the end.
+            </p>
+          </div>
+        </li>
+        <li class="step">
+          <div>
+            <h3>Handover</h3>
+            <p>
+              The system goes live with everything in your name: code, repository, hosting,
+              and payment accounts. You get an admin interface you can run yourself, a
+              walkthrough of it, and written documentation for whoever comes after.
+            </p>
+          </div>
+        </li>
+        <li class="step">
+          <div>
+            <h3>Ongoing support — if you want it</h3>
+            <p>
+              Omnipeak can keep maintaining and improving the system for as long as you like.
+              Or not — there's no fee to keep your own software running, and the documentation
+              makes a handoff to anyone else real.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--dim">
+    <div class="container">
+      <SectionHeader
+        eyebrow="Straight answers"
+        title="The three questions everyone asks"
+        subtitle="Most Omnipeak clients have been burned by a developer before. These deserve direct answers, not reassurance."
+      />
+      <div class="rows">
+        <div class="row">
+          <h3>&ldquo;What if you disappear like the last one?&rdquo;</h3>
+          <div class="row__body">
+            <p>
+              Then you lose nothing but time. From day one, the code, repository, hosting, and
+              payment accounts are in your name — not held by Omnipeak. The written
+              documentation is specifically there so any competent developer could take over.
+              The engagement is structured so you never depend on one person's goodwill.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <h3>&ldquo;Will I be able to operate it?&rdquo;</h3>
+          <div class="row__body">
+            <p>
+              Yes — that's a deliverable, not a hope. Every system ships with an admin
+              interface designed for a non-technical owner, and handover includes a
+              walkthrough of it. Changing prices, managing members, and checking your schedule
+              should never require a developer.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <h3>&ldquo;What will it cost and how long will it take?&rdquo;</h3>
+          <div class="row__body">
+            <p>
+              You'll know both numbers, in writing, before work begins. Projects are fixed
+              scope with defined deliverables — not hourly billing that drifts. If the scope
+              changes mid-project, the price change is agreed in writing first.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Start with the twenty-minute call"
+    text="The first step costs nothing and commits you to nothing — a plain-language conversation about how your business runs and whether this is the right fit."
+    secondaryLabel="See the work"
+    secondaryHref="/work/"
+  />
+</BaseLayout>

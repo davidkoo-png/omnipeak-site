@@ -1,0 +1,29 @@
+---
+import { CONTACT_EMAIL } from '../consts';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__brand">Omnipeak</p>
+        <p>Booking, membership, and billing systems for small businesses.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/process/">Process</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer__meta">
+      Omnipeak LLC · Los Angeles &amp; Orange County ·
+      <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> · © {year}
+    </p>
+  </div>
+</footer>

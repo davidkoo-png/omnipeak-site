@@ -4,16 +4,33 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Static marketing website for Omnipeak, a technology consulting business. Plain HTML/CSS/JS — no build tooling, no package manager, no framework. Deployed to GitHub Pages at the custom domain `omnipeak.tech` (see `CNAME`).
+Marketing website for Omnipeak LLC, a senior engineering practice specializing in booking, scheduling, and membership systems for appointment-based small businesses. Built with Astro 5 (static output), deployed to GitHub Pages at the custom domain `omnipeak.tech` via GitHub Actions (`.github/workflows/deploy.yml`).
 
 ## Development
 
-There is no build, lint, or test process. To preview changes, open the HTML files directly in a browser or serve the directory with any static file server (e.g. `python -m http.server`).
+- `npm run dev` — dev server at http://localhost:4321
+- `npm run build` — static build to `dist/`
+- `npm run preview` — serve the production build locally
+
+No test framework or linter. Verify changes by building and viewing the pages.
 
 ## Architecture
 
-- **Five standalone HTML pages** at the repo root: `index.html`, `services.html`, `process.html`, `about.html`, `contact.html`. Each is a full, self-contained document — there is no templating or shared-partial system, so the header/nav and footer markup is duplicated across every page. When changing shared elements (nav links, footer, contact email, meta tags), grep across all five HTML files rather than editing one.
-- **`css/styles.css`** — single stylesheet for the entire site, organized in labeled sections (Reset/Base, Typography, Layout/Container, Buttons, Header/Nav, Hero, etc.) separated by `/* ---- */` comment banners. Uses BEM-style class naming (`.hero__title`, `.nav__link--active`) and CSS custom properties defined in `:root` for colors (`--color-*`), font weights (`--font-weight-*`), and spacing scale (`--space-xs` through `--space-3xl`). Reuse existing variables/spacing scale rather than introducing new hardcoded values.
-- **`js/main.js`** — single vanilla JS file, no dependencies, no modules/bundler. Runs entirely inside one `DOMContentLoaded` listener, with each feature in its own labeled section: mobile nav toggle, header scroll-shadow effect, smooth-scroll for anchor links, contact form UX (loading state on submit), active-nav-link highlighting, scroll-triggered animations via `IntersectionObserver`, and a footer copyright year. A `debounce` utility is defined at file scope but not currently used by any handler.
-- **Contact form** (`contact.html`) submits to Formspree (no backend) — `main.js` only adds a loading-state UX layer on top of the native form submission.
-- **Contact email**: `support@omnipeak.tech`, used consistently across all five HTML pages' footers/contact sections. Keep it in sync if it changes.
+- **`src/pages/`** — six pages: `index`, `services`, `work` (case study), `process`, `about`, `contact`. Clean URLs (`/services/` etc.) via Astro's default directory build format.
+- **`src/layouts/BaseLayout.astro`** — the only layout: head/meta/canonical/OG tags, JSON-LD `ProfessionalService` structured data, Header, Footer. Takes `title` and `description` props; every page must pass both.
+- **`src/components/`** — `Header.astro` (nav, build-time active-link highlighting, mobile toggle with the site's only client-side JS), `Footer.astro`, `CTA.astro` (dark closing section used on most pages), `SectionHeader.astro`.
+- **`src/consts.ts`** — site-wide constants: contact email, Formspree endpoint, scheduling URL (currently a mailto fallback — swap in the real Cal.com/Calendly link here). Never hardcode these in pages.
+- **`src/styles/global.css`** — the entire stylesheet, imported once by BaseLayout. Design tokens as CSS custom properties in `:root` (`--paper`, `--ink`, `--pine`, spacing scale, three font stacks). BEM-ish class naming. Reuse tokens; don't introduce hardcoded colors/sizes.
+- **`public/`** — `CNAME` (custom domain — do not delete), `robots.txt`, `favicon.svg`.
+- **Contact form** (`contact.astro`) posts natively to Formspree; no JS involved.
+
+## Voice rules (apply to ALL client-facing copy)
+
+- Never: "solo", "one-man", "freelance", "small shop", "just me" — and never "we"/"our team" (no team exists to claim).
+- Use company voice with no pronoun ("Omnipeak builds…") or first person singular where it reassures ("You'll work directly with the person building your system").
+- Specific over generic; outcomes over implementation details; plain language — no "leveraging", "solutions", "digital transformation", "passionate".
+- Contact email is `support@omnipeak.tech` (defined in `src/consts.ts`).
+
+## Deployment
+
+Pushes to `main` trigger the GitHub Actions workflow, which builds and deploys to GitHub Pages (Pages source must be set to "GitHub Actions" in repo settings). The custom domain is preserved by `public/CNAME` landing in every build artifact. A failed build deploys nothing — the previous site keeps serving.
