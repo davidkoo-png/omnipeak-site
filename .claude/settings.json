@@ -1,0 +1,27 @@
+{
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "andrej-karpathy-skills@karpathy-skills": true,
+    "differential-review@trailofbits": false,
+    "static-analysis@trailofbits": false,
+    "supply-chain-risk-auditor@trailofbits": false,
+    "insecure-defaults@trailofbits": false,
+    "audit-context-building@trailofbits": false
+  },
+  "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    },
+    "karpathy-skills": {
+      "source": {
+        "source": "github",
+        "repo": "multica-ai/andrej-karpathy-skills"
+      }
+    }
+  }
+}
