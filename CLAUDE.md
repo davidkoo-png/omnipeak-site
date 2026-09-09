@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Marketing website for Omnipeak LLC, a senior engineering practice specializing in booking, scheduling, and membership systems for appointment-based small businesses. Built with Astro 5 (static output), deployed to GitHub Pages at the custom domain `omnipeak.tech` via GitHub Actions (`.github/workflows/deploy.yml`).
+Marketing website for Omnipeak LLC, a senior engineering practice building custom software for small businesses — booking and membership systems, internal tools, automations, and admin dashboards, plus taking over projects that stalled under a previous developer. Positioning note: booking/membership work is the deepest specialty and the only case study, but it is deliberately framed as proof of capability, not as the boundary of what Omnipeak builds. Do not narrow the site's copy back to appointment-based businesses only. Built with Astro 5 (static output), deployed to GitHub Pages at the custom domain `omnipeak.tech` via GitHub Actions (`.github/workflows/deploy.yml`).
 
 ## Development
 
@@ -30,6 +30,7 @@ No test framework or linter. Verify changes by building and viewing the pages.
 - Use company voice with no pronoun ("Omnipeak builds…") or first person singular where it reassures ("You'll work directly with the person building your system").
 - Specific over generic; outcomes over implementation details; plain language — no "leveraging", "solutions", "digital transformation", "passionate".
 - Contact email is `support@omnipeak.tech` (defined in `src/consts.ts`).
+- Do not imply the practice only does booking systems. Name booking/membership work as the deepest specialty where it adds credibility, never as the limit of scope.
 
 ## Deployment
 
