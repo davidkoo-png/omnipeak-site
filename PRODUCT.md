@@ -40,7 +40,7 @@ Visitors typically arrive with a specific pain (a stalled project, a manual week
 - One case study (`src/pages/work.astro`): ground-up rebuild of a booking and membership platform for a multi-location golf simulator business, the client's third attempt after two failed developers. Reservations with time-based pricing, Stripe recurring billing, scheduled jobs, franchise-ready structure.
 - Founder has 6+ years in the industry; deliberately not headlined (proof over tenure), may appear on About.
 - Client is named with permission: **Smash Factor Lounge** (smashfactorlounge.com).
-- **Pending:** a real screenshot of the Smash Factor booking/admin screen; the `SCREENSHOT SLOT` comment in `index.astro` marks where it goes (`.case__shot` style is ready).
+- Real screenshot of the live Smash Factor booking screen: `public/work/smash-factor-booking.png` (homepage case card and work page).
 - **Absent, must not be fabricated:** testimonials/quotes, outcome numbers, logos, other case studies, pricing figures.
 - Founder: David, software engineer, LA/OC, completing a master's in CS at Georgia Tech.
 

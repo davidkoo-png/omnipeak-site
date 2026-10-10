@@ -716,6 +716,21 @@ p {
   color: var(--ink-muted);
 }
 
+.case__figure {
+  margin: var(--space-xl) 0 0;
+}
+
+.case__figure figcaption {
+  margin-top: var(--space-sm);
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+}
+
+.case__figure .case__shot {
+  margin: 0;
+  box-shadow: var(--shadow-1);
+}
+
 .case__shot {
   width: 100%;
   height: auto;
@@ -811,7 +826,7 @@ p {
 }
 
 /* Plain inline facts, not chips: chips read as buttons */
-.case-meta li + li::before {
+.case-meta li:not(:last-child)::after {
   content: '·';
   margin-inline: 0.6rem;
   color: var(--ink-faint);
