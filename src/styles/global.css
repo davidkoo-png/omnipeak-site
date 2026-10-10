@@ -334,6 +334,22 @@ p {
   padding: 0;
 }
 
+.skip-link {
+  position: absolute;
+  left: var(--space-md);
+  top: -4rem;
+  z-index: 40;
+  background: var(--surface);
+  color: var(--ink);
+  padding: 0.5rem 1rem;
+  border-radius: var(--r-md);
+}
+
+.skip-link:focus {
+  top: var(--space-sm);
+  box-shadow: var(--shadow-2);
+}
+
 .nav__link {
   font-size: 0.9375rem;
   font-weight: 500;
@@ -395,9 +411,15 @@ p {
     display: flex;
   }
 
+  .nav__link {
+    display: block;
+    padding-block: 0.7rem;
+  }
+
   .btn.nav__cta {
+    display: block;
     text-align: center;
-    padding: 0.625rem 1.25rem;
+    padding: 0.7rem 1.25rem;
   }
 
   .nav__toggle[aria-expanded='true'] span:nth-child(1) {
@@ -430,6 +452,11 @@ p {
 
 .hero__content .lede {
   margin-top: var(--space-lg);
+}
+
+.hero__note {
+  margin-top: var(--space-sm);
+  font-size: 0.875rem;
 }
 
 @media (max-width: 40rem) {
@@ -493,6 +520,14 @@ p {
   height: 8px;
   border-radius: var(--r-full);
   background: var(--accent-green);
+}
+
+.thread__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-md);
 }
 
 .thread__msg {
@@ -669,8 +704,24 @@ p {
   font-weight: 400;
 }
 
-.case__note {
+.case .case__note {
   margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--hairline);
+}
+
+.case__live {
+  margin-top: var(--space-md);
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+}
+
+.case__shot {
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--hairline);
+  margin-block: var(--space-md);
 }
 
 /* ---- Definition rows (services detail, process answers) ---- */
@@ -751,20 +802,19 @@ p {
 .case-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-xs) var(--space-sm);
   list-style: none;
   padding: 0;
-  margin-top: var(--space-lg);
+  margin-top: var(--space-md);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--ink-secondary);
 }
 
-.case-meta li {
-  font-size: 0.875rem;
-  font-weight: 500;
-  border: 1px solid var(--hairline);
-  border-radius: var(--r-full);
-  padding: 0.35rem 0.9rem;
-  color: var(--ink-secondary);
-  background: var(--surface);
+/* Plain inline facts, not chips: chips read as buttons */
+.case-meta li + li::before {
+  content: '·';
+  margin-inline: 0.6rem;
+  color: var(--ink-faint);
 }
 
 .prose h2 {
@@ -1008,6 +1058,7 @@ button.btn {
 }
 
 .footer__meta {
+  max-width: none;
   margin-top: var(--space-lg);
   color: var(--ink-muted);
 }

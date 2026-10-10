@@ -7,7 +7,7 @@ import { SCHEDULING_URL } from '../consts';
 
 <BaseLayout
   title="Omnipeak — Custom software, no handoffs"
-  description="Omnipeak builds custom software for small businesses with no handoffs: the person who understands your business is the one writing the code. Plain-English updates, bugs tracked and handled immediately."
+  description="Omnipeak builds booking systems, internal tools, automations, and rescues of stalled projects for small businesses. The person who understands your business writes the code, and your business owns everything it builds."
 >
   <section class="hero section--dark">
     <span class="sticker" aria-hidden="true" style="width:14px;height:14px;top:14%;left:46%;background:var(--accent-pink);"></span>
@@ -21,14 +21,15 @@ import { SCHEDULING_URL } from '../consts';
           <span class="eyebrow">Custom software for small businesses</span>
           <h1>The person who understands your business is the one writing the code.</h1>
           <p class="lede">
-            Most software projects go wrong in the handoff, when what the owner meant isn't what
-            the developer built. With Omnipeak there's no handoff: the person you explain your
-            business to is the person who builds it.
+            Booking and membership systems, internal tools, automations, and rescues of stalled
+            projects. Whatever Omnipeak builds, your business owns it: the code, the hosting, and
+            the accounts, from day one.
           </p>
           <div class="btn-row">
             <a href={SCHEDULING_URL} class="btn btn--primary">Book an intro call</a>
             <a href="/work/" class="btn btn--outline">See the work</a>
           </div>
+          <p class="hero__note">A free 20-minute call, in plain language. No obligation.</p>
         </div>
 
         <figure class="thread">
@@ -36,82 +37,22 @@ import { SCHEDULING_URL } from '../consts';
             <span>Example: how a reported bug gets handled</span>
             <span class="thread__status">Resolved</span>
           </figcaption>
-          <div class="thread__msg">
-            <span class="thread__meta">You · 9:12 AM</span>
-            <p class="thread__bubble">Customers can't check out on the site.</p>
-          </div>
-          <div class="thread__msg thread__msg--reply">
-            <span class="thread__meta">Omnipeak · 9:20 AM</span>
-            <p class="thread__bubble">Logged it and on it now. Looks like the payment step.</p>
-          </div>
-          <div class="thread__msg thread__msg--reply">
-            <span class="thread__meta">Omnipeak · 11:47 AM</span>
-            <p class="thread__bubble">Fixed and live. Here's what broke and what changed, in plain English.</p>
-          </div>
+          <ol class="thread__list">
+            <li class="thread__msg">
+              <span class="thread__meta">You · Tuesday morning</span>
+              <p class="thread__bubble">Customers can't check out on the site.</p>
+            </li>
+            <li class="thread__msg thread__msg--reply">
+              <span class="thread__meta">Omnipeak · Tuesday morning</span>
+              <p class="thread__bubble">Logged it and on it now. Looks like the payment step.</p>
+            </li>
+            <li class="thread__msg thread__msg--reply">
+              <span class="thread__meta">Omnipeak · Same day</span>
+              <p class="thread__bubble">Fixed and live. Here's what broke and what changed, in plain English.</p>
+            </li>
+          </ol>
         </figure>
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <SectionHeader
-        title="Nothing lost in translation"
-        subtitle="Owners and developers often talk past each other. Omnipeak closes that gap by being both: the one who listens and the one who builds."
-      />
-      <div class="pillars">
-        <div class="pillar">
-          <h3><span class="dot" style="background:var(--accent-teal);" aria-hidden="true"></span>No handoffs</h3>
-          <p>
-            Your business isn't passed from a salesperson to a project manager to a developer.
-            The person who listens to you builds it, so what you asked for is what you get.
-          </p>
-        </div>
-        <div class="pillar">
-          <h3><span class="dot" style="background:var(--accent-purple);" aria-hidden="true"></span>Clear communication</h3>
-          <p>
-            Updates come in plain English, not tech jargon. You always know what's happening,
-            what's next, and why.
-          </p>
-        </div>
-        <div class="pillar">
-          <h3><span class="dot" style="background:var(--accent-orange);" aria-hidden="true"></span>Fast turnaround</h3>
-          <p>
-            Reported bugs are tracked and handled immediately, not left in a queue. New work
-            moves in short steps, so you see progress every week.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--dim">
-    <div class="container">
-      <article class="card card--raised case">
-        <p class="case__client">
-          <a href="https://smashfactorlounge.com" rel="noopener">Smash Factor Lounge</a>
-          <span>· multi-location golf simulators</span>
-        </p>
-        <h2>The third attempt that shipped</h2>
-        <p class="muted">
-          Two developers before couldn't finish their booking platform. Omnipeak rebuilt it from
-          the ground up: reservations with time-based pricing, memberships with recurring billing,
-          and a structure ready for new locations.
-        </p>
-        <ul class="case-meta">
-          <li>Online booking</li>
-          <li>Memberships</li>
-          <li>Recurring billing</li>
-          <li>Multi-location</li>
-        </ul>
-        <div class="btn-row">
-          <a href="/work/" class="btn btn--ghost">Read the case study</a>
-        </div>
-      </article>
-      <p class="case__note muted">
-        Booking and billing is the hardest kind of small-business software. The work also ranges
-        from internal dashboards to automations that replace a weekly manual routine.
-      </p>
     </div>
   </section>
 
@@ -129,9 +70,68 @@ import { SCHEDULING_URL } from '../consts';
         <li>Data in five places</li>
         <li>Reports rebuilt every month</li>
       </ul>
-      <div class="btn-row">
-        <a href={SCHEDULING_URL} class="btn btn--primary">Book an intro call</a>
+    </div>
+  </section>
+
+  <section class="section section--dim">
+    <div class="container">
+      <SectionHeader title="What working with Omnipeak is like" />
+      <div class="pillars">
+        <div class="pillar">
+          <h3>No handoffs</h3>
+          <p>
+            Your business isn't passed from a salesperson to a project manager to a developer.
+            The person who listens to you builds it, so what you asked for is what you get.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3>Clear communication</h3>
+          <p>
+            Updates come in plain English, not tech jargon. You always know what's happening,
+            what's next, and why.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3>Fast turnaround</h3>
+          <p>
+            Reported bugs are tracked and handled immediately, not left in a queue. New work
+            moves in short steps, so you see progress every week.
+          </p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="card card--raised case">
+        <p class="case__client">Smash Factor Lounge <span>· multi-location golf simulators</span></p>
+        <h2>The third attempt that shipped</h2>
+        <!-- SCREENSHOT SLOT: real Smash Factor booking/admin screen goes here, e.g.
+             <img class="case__shot" src="/work/smash-factor.png" alt="…" width="…" height="…" /> -->
+        <p class="muted">
+          Two developers before couldn't finish their booking platform. Omnipeak rebuilt it from
+          the ground up: reservations with time-based pricing, memberships with recurring billing,
+          and a structure ready for new locations.
+        </p>
+        <ul class="case-meta">
+          <li>Online booking</li>
+          <li>Memberships</li>
+          <li>Recurring billing</li>
+          <li>Multi-location</li>
+        </ul>
+        <p class="case__note muted">
+          Booking and billing is the hardest kind of small-business software. The work also ranges
+          from internal dashboards to automations that replace a weekly manual routine.
+        </p>
+        <div class="btn-row">
+          <a href="/work/" class="btn btn--ghost">Read the case study</a>
+          <a href={SCHEDULING_URL} class="btn btn--primary">Book an intro call</a>
+        </div>
+        <p class="case__live">
+          Live at <a href="https://smashfactorlounge.com" rel="noopener">smashfactorlounge.com</a>
+        </p>
+      </article>
     </div>
   </section>
 
