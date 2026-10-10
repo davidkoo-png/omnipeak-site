@@ -32,25 +32,19 @@ import { SCHEDULING_URL } from '../consts';
           <p class="hero__note">A free 20-minute call, in plain language. No obligation.</p>
         </div>
 
-        <figure class="thread">
-          <figcaption class="thread__head">
-            <span>Example: how a reported bug gets handled</span>
-            <span class="thread__status">Resolved</span>
-          </figcaption>
-          <ol class="thread__list">
-            <li class="thread__msg">
-              <span class="thread__meta">You · Tuesday morning</span>
-              <p class="thread__bubble">Customers can't check out on the site.</p>
-            </li>
-            <li class="thread__msg thread__msg--reply">
-              <span class="thread__meta">Omnipeak · Tuesday morning</span>
-              <p class="thread__bubble">Logged it and on it now. Looks like the payment step.</p>
-            </li>
-            <li class="thread__msg thread__msg--reply">
-              <span class="thread__meta">Omnipeak · Same day</span>
-              <p class="thread__bubble">Fixed and live. Here's what broke and what changed, in plain English.</p>
-            </li>
-          </ol>
+        <figure class="browser">
+          <div class="browser__frame">
+            <div class="browser__bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <img
+              src="/work/smash-factor-booking.png"
+              alt="Smash Factor Lounge booking screen: a grid of simulator bays by hour, showing open slots with regular and member prices and slots already taken."
+              width="1316"
+              height="997"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+          <figcaption>Live booking system built for <a href="/work/">Smash Factor Lounge</a></figcaption>
         </figure>
       </div>
     </div>
@@ -107,15 +101,6 @@ import { SCHEDULING_URL } from '../consts';
       <article class="card card--raised case">
         <p class="case__client">Smash Factor Lounge <span>· multi-location golf simulators</span></p>
         <h2>The third attempt that shipped</h2>
-        <img
-          class="case__shot"
-          src="/work/smash-factor-booking.png"
-          alt="Smash Factor Lounge booking screen: a grid of simulator bays by hour, showing open slots with regular and member prices and slots already taken."
-          width="1316"
-          height="997"
-          loading="lazy"
-          decoding="async"
-        />
         <p class="muted">
           Two developers before couldn't finish their booking platform. Omnipeak rebuilt it from
           the ground up: reservations with time-based pricing, memberships with recurring billing,

@@ -482,85 +482,53 @@ p {
   pointer-events: none;
 }
 
-/* ---- Message thread (signature graphic) ---- */
+/* ---- Hero browser frame (real client screen) ---- */
 
-.thread {
+.browser {
   margin: 0;
-  position: relative;
-  background: var(--surface);
-  color: var(--ink);
-  border-radius: var(--r-lg);
-  box-shadow: var(--shadow-2);
-  padding: var(--space-lg);
-  display: grid;
-  gap: var(--space-md);
 }
 
-.thread__head {
+.browser__frame {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
+  transform: rotate(1.5deg);
+}
+
+.browser__bar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--ink-muted);
-  padding-bottom: var(--space-sm);
+  gap: 6px;
+  padding: 10px 12px;
   border-bottom: 1px solid var(--hairline);
 }
 
-.thread__status {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--ink-muted);
-}
-
-.thread__status::before {
-  content: '';
-  width: 8px;
-  height: 8px;
+.browser__bar span {
+  width: 10px;
+  height: 10px;
   border-radius: var(--r-full);
-  background: var(--accent-green);
+  background: var(--hairline);
 }
 
-.thread__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: var(--space-md);
+.browser img {
+  width: 100%;
+  height: auto;
 }
 
-.thread__msg {
-  max-width: 88%;
-}
-
-.thread__msg--reply {
-  justify-self: end;
-}
-
-.thread__meta {
-  display: block;
-  font-size: 0.75rem;
-  color: var(--ink-muted);
-  margin-bottom: 4px;
-}
-
-.thread__msg--reply .thread__meta {
+.browser figcaption {
+  margin-top: var(--space-md);
+  font-size: 0.875rem;
   text-align: right;
 }
 
-.thread .thread__bubble {
-  font-size: 0.9375rem;
-  line-height: 1.4;
-  padding: 0.625rem 0.875rem;
-  border-radius: var(--r-lg);
-  background: var(--canvas-soft);
-  color: var(--ink);
-}
+@media (max-width: 56rem) {
+  .browser__frame {
+    transform: none;
+  }
 
-.thread .thread__msg--reply .thread__bubble {
-  background: var(--surface);
-  box-shadow: inset 0 0 0 1px var(--hairline);
+  .browser figcaption {
+    text-align: left;
+  }
 }
 
 /* ---- Card grids ---- */
