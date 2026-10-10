@@ -5,11 +5,10 @@ import { CONTACT_EMAIL, FORMSPREE_ENDPOINT, SCHEDULING_URL } from '../consts';
 
 <BaseLayout
   title="Contact — Omnipeak"
-  description="Book a twenty-minute intro call or send a message about your project. Every inquiry gets a reply within one business day."
+  description="Book a twenty-minute intro call with the person who would build your system, or send a message about your project."
 >
-  <section class="section">
+  <section class="section page-hero">
     <div class="container">
-      <span class="eyebrow">Contact</span>
       <h1>Start with a call</h1>
       <p class="lede">
         Twenty minutes, in plain language, about how your business runs and what's getting in
@@ -18,56 +17,58 @@ import { CONTACT_EMAIL, FORMSPREE_ENDPOINT, SCHEDULING_URL } from '../consts';
     </div>
   </section>
 
-  <section class="section section--rule">
+  <section class="section section--tight">
     <div class="container">
       <div class="contact-grid">
-        <div>
+        <div class="card card--raised">
           <h2>Book directly</h2>
-          <p>
-            Pick a time that works for you — the call is with the engineer who would build
-            your system.
+          <p class="muted">
+            Pick a time that works for you. The call is with the person who would build your
+            system, not a salesperson.
           </p>
           <div class="btn-row">
             <a href={SCHEDULING_URL} class="btn btn--primary">Book an intro call</a>
           </div>
-          <p style="margin-top: var(--space-lg);">
-            Prefer email? Write to
-            <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> — every message gets a
-            reply within one business day.
+          <p class="contact-alt">
+            Prefer email? Write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
           </p>
         </div>
 
-        <form class="form" action={FORMSPREE_ENDPOINT} method="POST">
-          <input type="hidden" name="_subject" value="New inquiry from omnipeak.tech" />
-          <div>
-            <label for="name">Your name</label>
-            <input type="text" id="name" name="name" required autocomplete="name" />
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required autocomplete="email" />
-          </div>
-          <div>
-            <label for="business">Your business</label>
-            <input
-              type="text"
-              id="business"
-              name="business"
-              placeholder="e.g. a two-location pilates studio, or a plumbing contractor"
-            />
-          </div>
-          <div>
-            <label for="message">What's going on?</label>
-            <textarea
-              id="message"
-              name="message"
-              required
-              placeholder="What you're running on today, and what's not working about it."></textarea>
-          </div>
-          <div>
-            <button type="submit" class="btn btn--primary">Send message</button>
-          </div>
-        </form>
+        <div>
+          <h2>Or send a message</h2>
+          <form class="form" action={FORMSPREE_ENDPOINT} method="POST">
+            <input type="hidden" name="_subject" value="New inquiry from omnipeak.tech" />
+            <div>
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+            <div>
+              <label for="business">Your business</label>
+              <input
+                type="text"
+                id="business"
+                name="business"
+                autocomplete="organization"
+                placeholder="e.g. a two-location pilates studio, or a plumbing contractor"
+              />
+            </div>
+            <div>
+              <label for="message">What's going on?</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="What you're running on today, and what's not working about it."></textarea>
+            </div>
+            <div>
+              <button type="submit" class="btn btn--primary">Send message</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>

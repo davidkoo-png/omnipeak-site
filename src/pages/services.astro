@@ -6,94 +6,97 @@ import CTA from '../components/CTA.astro';
 
 <BaseLayout
   title="Services — Omnipeak"
-  description="Custom web applications, booking and membership systems, rescue of stalled software projects, process automation, and internal tools — fixed-scope projects with defined deliverables."
+  description="Custom web applications, booking and membership systems, rescue of stalled software projects, process automation, and internal tools — fixed-scope projects built by the same person you explain your business to."
 >
-  <section class="section">
+  <section class="section page-hero">
     <div class="container">
-      <span class="eyebrow">Services</span>
       <h1>What Omnipeak builds</h1>
       <p class="lede">
-        Omnipeak builds what your business needs, not what's on a menu. These are the shapes
-        the work usually takes — all delivered the same way: a fixed scope, a defined set of
-        deliverables, and a system you own and can run yourself.
+        Whatever your business needs, not what's on a menu. Every project runs the same way:
+        you explain how your business works to the person who will build it, and you get a
+        fixed scope, a fixed price, and a system you own.
       </p>
     </div>
   </section>
 
-  <section class="section section--rule">
+  <section class="section section--tight">
     <div class="container">
-      <div class="rows">
-        <div class="row">
-          <h3>Booking, membership &amp; billing systems</h3>
-          <div class="row__body">
-            <p>
-              The deepest specialty, and the hardest kind of this work. Systems for businesses
-              that run on reservations, recurring memberships, and recurring payments — built
-              around how your business actually prices and schedules, not how an off-the-shelf
-              app assumes you do.
-            </p>
-            <ul>
-              <li>Reservations and slot logic, including time-based and peak pricing</li>
-              <li>Memberships with recurring billing, pauses, and cancellations</li>
-              <li>Payments through Stripe, in your own Stripe account</li>
-              <li>Multi-location support when you're ready to grow</li>
-            </ul>
-          </div>
-        </div>
+      <article class="card card--raised specialty">
+        <p class="specialty__label"><span class="dot" style="background:var(--accent-teal);" aria-hidden="true"></span>Deepest specialty</p>
+        <h2>Booking, membership &amp; billing systems</h2>
+        <p class="muted">
+          The hardest kind of small-business software. Systems for businesses that run on
+          reservations, recurring memberships, and recurring payments, built around how your
+          business actually prices and schedules, not how an off-the-shelf app assumes you do.
+        </p>
+        <ul class="checks">
+          <li>Reservations and slot logic, including time-based and peak pricing</li>
+          <li>Memberships with recurring billing, pauses, and cancellations</li>
+          <li>Payments through Stripe, in your own Stripe account</li>
+          <li>Multi-location support when you're ready to grow</li>
+        </ul>
+        <p class="specialty__proof">
+          Running today at <a href="/work/">Smash Factor Lounge</a>, after two previous
+          developers couldn't finish it.
+        </p>
+      </article>
+    </div>
+  </section>
 
+  <section class="section">
+    <div class="container">
+      <SectionHeader
+        title="And everything else your business runs on"
+        subtitle="If it can be explained clearly, it can be scoped and built."
+      />
+      <div class="rows">
         <div class="row">
           <h3>Custom web applications</h3>
           <div class="row__body">
             <p>
-              The work that doesn't fit a category, because most businesses have at least one
-              thing they do differently from everyone else. If your operation needs
-              software that doesn't exist yet — a quoting tool, an inventory system, a customer
-              portal, something no one has named — that's a normal project, not an exception.
+              Most businesses have at least one thing they do differently from everyone else. A
+              quoting tool, an inventory system, a customer portal, something no one has named
+              yet: that's a normal project, not an exception.
             </p>
           </div>
         </div>
-
         <div class="row">
           <h3>Rescuing stalled projects</h3>
           <div class="row__body">
             <p>
-              For owners who paid for software and got a half-finished system — or a finished
-              one nobody can maintain. Omnipeak reads the existing code, gives you an honest
-              written assessment of what's salvageable, and then either finishes it or rebuilds
-              it. Either way, you get a clear answer before any building starts.
+              For owners who paid for software and got a half-finished system, or a finished one
+              nobody can maintain. Omnipeak reads the existing code, gives you an honest written
+              assessment of what's salvageable, and then either finishes it or rebuilds it. You
+              get a clear answer before any building starts.
             </p>
           </div>
         </div>
-
         <div class="row">
           <h3>Process automation</h3>
           <div class="row__body">
             <p>
-              The work your staff does by hand every week — copying records between systems,
+              The work your staff does by hand every week (copying records between systems,
               chasing failed payments, sending the same reminder emails, rebuilding the same
-              spreadsheet — replaced with software that does it on schedule, every time.
+              spreadsheet) replaced with software that does it on schedule, every time.
             </p>
           </div>
         </div>
-
         <div class="row">
           <h3>Internal tools &amp; admin dashboards</h3>
           <div class="row__body">
             <p>
-              The numbers you check every morning and the records your staff updates all day,
-              in one place — instead of scattered across spreadsheets, inboxes, and someone's
-              memory.
+              The numbers you check every morning and the records your staff updates all day, in
+              one place instead of scattered across spreadsheets, inboxes, and someone's memory.
             </p>
           </div>
         </div>
-
         <div class="row">
           <h3>Ongoing maintenance</h3>
           <div class="row__body">
             <p>
-              After launch, Omnipeak can keep improving and maintaining your system for as long
-              as you want — or hand it off cleanly to anyone you choose. The documentation and
-              ownership terms make both options real.
+              After launch, Omnipeak can keep improving your system and handling bugs as they
+              come in, tracked and dealt with right away. Or you can hand it to anyone you
+              choose: the documentation and ownership terms make both options real.
             </p>
           </div>
         </div>
@@ -104,10 +107,23 @@ import CTA from '../components/CTA.astro';
   <section class="section section--dim">
     <div class="container">
       <SectionHeader
-        eyebrow="Engagement model"
-        title="Fixed scope, defined deliverables"
-        subtitle="Every project starts with a written proposal: what will be built, what it will cost, and when it will be done. Not hourly billing, not open-ended retainers — you know the number before work begins."
+        title="Fixed scope, fixed price, in writing"
+        subtitle="Every project starts with a written proposal. You know what you're getting and what it costs before any work begins."
       />
+      <div class="pillars">
+        <div class="pillar">
+          <h3>What will be built</h3>
+          <p>A plain-English description of the system and what it will do for your business.</p>
+        </div>
+        <div class="pillar">
+          <h3>What it will cost</h3>
+          <p>One fixed price. Not hourly billing that drifts, not an open-ended retainer.</p>
+        </div>
+        <div class="pillar">
+          <h3>When it will be done</h3>
+          <p>A delivery date, with working software to look at along the way.</p>
+        </div>
+      </div>
     </div>
   </section>
 

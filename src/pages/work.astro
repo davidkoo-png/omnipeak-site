@@ -5,94 +5,97 @@ import CTA from '../components/CTA.astro';
 
 <BaseLayout
   title="Work — Omnipeak"
-  description="Case study: a ground-up rebuild of a booking and membership platform for a multi-location golf simulator business — the client's third attempt, and the one that shipped."
+  description="Case study: a ground-up rebuild of a booking and membership platform for Smash Factor Lounge, a multi-location golf simulator business — the client's third attempt, and the one that shipped."
 >
-  <section class="section">
+  <section class="section page-hero">
     <div class="container">
-      <span class="eyebrow">Case study</span>
+      <p class="case__client">
+        <a href="https://smashfactorlounge.com" rel="noopener">Smash Factor Lounge</a>
+        <span>· multi-location golf simulators</span>
+      </p>
       <h1>The booking platform that took three tries</h1>
       <p class="lede">
-        A ground-up rebuild of the reservation and membership system for a multi-location golf
-        simulator business — after two previous developers failed to finish it.
+        A ground-up rebuild of the reservation and membership system, after two previous
+        developers failed to finish it. The third attempt is the one the business now runs on.
       </p>
-      <!-- CLIENT NAME SLOT: when permission is granted, name the business here and in the
-           lede above, and add a logo/quote block after the intro. -->
       <ul class="case-meta">
-        <li>Golf simulators</li>
-        <li>Multi-location</li>
-        <li>Reservations</li>
+        <li>Online booking</li>
         <li>Memberships</li>
-        <li>Stripe billing</li>
+        <li>Recurring billing</li>
+        <li>Multi-location</li>
       </ul>
     </div>
   </section>
 
-  <section class="section section--rule">
+  <section class="section section--tight">
     <div class="container">
-      <div class="prose">
-        <h2>The situation</h2>
-        <p>
-          The owners had paid for this system twice before. The first developer disappeared
-          partway through. The second delivered something that never worked well enough to run
-          the business on. By the time they contacted Omnipeak, they were running a
-          multi-location operation on tools that couldn't handle their pricing, their
-          memberships, or their growth plans — and they were understandably wary of hiring a
-          third developer.
-        </p>
+      <div class="case-layout">
+        <div class="prose">
+          <h2>The situation</h2>
+          <p>
+            The owners had paid for this system twice before. The first developer disappeared
+            partway through. The second delivered something that never worked well enough to run
+            the business on. By the time they contacted Omnipeak, they were running a
+            multi-location operation on tools that couldn't handle their pricing, their
+            memberships, or their growth plans, and they were understandably wary of hiring a
+            third developer.
+          </p>
 
-        <h2>What was built</h2>
-        <p>
-          A complete booking and membership platform, rebuilt from the ground up rather than
-          patched:
-        </p>
-        <ul>
-          <li>
-            <strong>Reservations with real pricing rules.</strong> Simulator bays are booked in
-            time slots, with pricing that changes by time of day — the way the business
-            actually charges, enforced automatically instead of by staff.
-          </li>
-          <li>
-            <strong>Memberships and recurring billing.</strong> Member plans with recurring
-            charges through Stripe, including the unglamorous parts: failed payments, plan
-            changes, and cancellations, handled without manual work.
-          </li>
-          <li>
-            <strong>Scheduled jobs.</strong> The routine work — billing runs, reminders,
-            cleanup — happens on schedule, every time, with no one having to remember it.
-          </li>
-          <li>
-            <strong>Built for more locations.</strong> The system is structured so new
-            locations — including franchises — can be added without rebuilding anything.
-          </li>
-        </ul>
-        <!-- OUTCOME NUMBERS SLOT: when real figures exist (bookings handled per month,
-             revenue processed, staff hours saved), add a short stats row here. -->
+          <h2>What was built</h2>
+          <p>
+            A complete booking and membership platform, rebuilt from the ground up rather than
+            patched:
+          </p>
+          <ul>
+            <li>
+              <strong>Reservations with real pricing rules.</strong> Simulator bays are booked in
+              time slots, with pricing that changes by time of day: the way the business
+              actually charges, enforced automatically instead of by staff.
+            </li>
+            <li>
+              <strong>Memberships and recurring billing.</strong> Member plans with recurring
+              charges through Stripe, including the unglamorous parts: failed payments, plan
+              changes, and cancellations, handled without manual work.
+            </li>
+            <li>
+              <strong>Scheduled jobs.</strong> The routine work (billing runs, reminders,
+              cleanup) happens on schedule, every time, with no one having to remember it.
+            </li>
+            <li>
+              <strong>Built for more locations.</strong> The system is structured so new
+              locations, including franchises, can be added without rebuilding anything.
+            </li>
+          </ul>
+          <!-- OUTCOME NUMBERS SLOT: when real figures exist (bookings handled per month,
+               revenue processed, staff hours saved), add a short stats row here. -->
 
-        <h2>What the client got</h2>
-        <p>
-          A system their staff runs day to day through an admin interface built for
-          non-technical operators — schedules, members, and pricing managed without calling
-          anyone. The code, repository, hosting, and Stripe account are all in the client's
-          name, with written documentation so any developer they ever hire can pick it up.
-        </p>
-        <p>
-          The third attempt is the one the business now runs on.
-        </p>
-        <!-- QUOTE SLOT: client testimonial goes here when permission is granted. -->
+          <h2>What the client got</h2>
+          <p>
+            A system their staff runs day to day through an admin interface built for
+            non-technical operators: schedules, members, and pricing managed without calling
+            anyone. The code, repository, hosting, and Stripe account are all in the client's
+            name, with written documentation so any developer they ever hire can pick it up.
+          </p>
+          <!-- QUOTE SLOT: client testimonial goes here when permission is granted. -->
+        </div>
+
+        <aside class="card case-aside">
+          <h3>Why the third attempt worked</h3>
+          <p>
+            The owners explained how their business charges, books, and bills directly to the
+            person writing the code. Nothing was relayed through a project manager, so nothing
+            was lost along the way.
+          </p>
+          <div class="btn-row">
+            <a href="https://smashfactorlounge.com" class="btn btn--ghost" rel="noopener">Visit Smash Factor Lounge</a>
+          </div>
+        </aside>
       </div>
     </div>
   </section>
 
-  <section class="section section--dim">
-    <div class="container">
-      <h2>Does this sound familiar?</h2>
-      <p class="lede">
-        If you're on your second or third attempt at getting software built, the assessment
-        comes first: an honest, written read on what you have before anything else is
-        proposed.
-      </p>
-    </div>
-  </section>
-
-  <CTA title="Bring the project that stalled" />
+  <CTA
+    title="Bring the project that stalled"
+    text="On your second or third attempt at getting software built? The assessment comes first: an honest, written read on what you have before anything else is proposed."
+  />
 </BaseLayout>

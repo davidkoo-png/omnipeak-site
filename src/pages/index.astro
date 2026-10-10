@@ -2,63 +2,84 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import CTA from '../components/CTA.astro';
+import { SCHEDULING_URL } from '../consts';
 ---
 
 <BaseLayout
-  title="Omnipeak — Custom software for small businesses"
-  description="Omnipeak builds custom software for small businesses — booking and membership systems, internal tools, automations, and admin dashboards — and finishes projects other developers left half-done."
+  title="Omnipeak — Custom software, no handoffs"
+  description="Omnipeak builds custom software for small businesses with no handoffs: the person who understands your business is the one writing the code. Plain-English updates, bugs tracked and handled immediately."
 >
-  <section class="hero">
+  <section class="hero section--dark">
+    <span class="sticker" aria-hidden="true" style="width:14px;height:14px;top:14%;left:46%;background:var(--accent-pink);"></span>
+    <span class="sticker" aria-hidden="true" style="width:10px;height:10px;top:90%;left:3%;background:var(--accent-sky);"></span>
+    <span class="sticker" aria-hidden="true" style="width:18px;height:18px;top:8%;right:6%;background:var(--accent-purple);"></span>
+    <span class="sticker" aria-hidden="true" style="width:12px;height:12px;bottom:10%;right:38%;background:var(--accent-orange);"></span>
+
     <div class="container">
       <div class="hero__inner">
         <div class="hero__content">
-          <span class="eyebrow">Custom software · Automation · Internal tools</span>
-          <h1>Custom software for small businesses that outgrew their tools.</h1>
+          <span class="eyebrow">Custom software for small businesses</span>
+          <h1>The person who understands your business is the one writing the code.</h1>
           <p class="lede">
-            Omnipeak builds the software your business actually needs — booking and membership
-            systems, internal tools, automations, the report you rebuild by hand every month.
-            You'll work directly with the engineer building it, and you'll own every piece of
-            it.
+            Most software projects go wrong in the handoff, when what the owner meant isn't what
+            the developer built. With Omnipeak there's no handoff: the person you explain your
+            business to is the person who builds it.
           </p>
           <div class="btn-row">
-            <a href="/contact/" class="btn btn--primary">Book an intro call</a>
-            <a href="/work/" class="btn btn--ghost">See the work</a>
+            <a href={SCHEDULING_URL} class="btn btn--primary">Book an intro call</a>
+            <a href="/work/" class="btn btn--outline">See the work</a>
           </div>
         </div>
 
-        <div class="hero__visual" aria-hidden="true">
-          <div class="sheet">
-            <div class="sheet__head">
-              <span></span>
-              <span>Bay 1</span>
-              <span>Bay 2</span>
-              <span>Bay 3</span>
-            </div>
-            <div class="sheet__row">
-              <span class="sheet__time">9:00</span>
-              <span class="sheet__slot sheet__slot--booked">Booked</span>
-              <span class="sheet__slot"></span>
-              <span class="sheet__slot sheet__slot--member">Member</span>
-            </div>
-            <div class="sheet__row">
-              <span class="sheet__time">10:00</span>
-              <span class="sheet__slot"></span>
-              <span class="sheet__slot sheet__slot--booked">Booked</span>
-              <span class="sheet__slot sheet__slot--member">Member</span>
-            </div>
-            <div class="sheet__row">
-              <span class="sheet__time">11:00</span>
-              <span class="sheet__slot sheet__slot--member">Member</span>
-              <span class="sheet__slot sheet__slot--booked">Booked</span>
-              <span class="sheet__slot"></span>
-            </div>
-            <div class="sheet__row">
-              <span class="sheet__time">12:00</span>
-              <span class="sheet__slot sheet__slot--booked">League</span>
-              <span class="sheet__slot"></span>
-              <span class="sheet__slot sheet__slot--booked">Booked</span>
-            </div>
+        <figure class="thread">
+          <figcaption class="thread__head">
+            <span>Example: how a reported bug gets handled</span>
+            <span class="thread__status">Resolved</span>
+          </figcaption>
+          <div class="thread__msg">
+            <span class="thread__meta">You · 9:12 AM</span>
+            <p class="thread__bubble">Customers can't check out on the site.</p>
           </div>
+          <div class="thread__msg thread__msg--reply">
+            <span class="thread__meta">Omnipeak · 9:20 AM</span>
+            <p class="thread__bubble">Logged it and on it now. Looks like the payment step.</p>
+          </div>
+          <div class="thread__msg thread__msg--reply">
+            <span class="thread__meta">Omnipeak · 11:47 AM</span>
+            <p class="thread__bubble">Fixed and live. Here's what broke and what changed, in plain English.</p>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionHeader
+        title="Nothing lost in translation"
+        subtitle="Owners and developers often talk past each other. Omnipeak closes that gap by being both: the one who listens and the one who builds."
+      />
+      <div class="pillars">
+        <div class="pillar">
+          <h3><span class="dot" style="background:var(--accent-teal);" aria-hidden="true"></span>No handoffs</h3>
+          <p>
+            Your business isn't passed from a salesperson to a project manager to a developer.
+            The person who listens to you builds it, so what you asked for is what you get.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3><span class="dot" style="background:var(--accent-purple);" aria-hidden="true"></span>Clear communication</h3>
+          <p>
+            Updates come in plain English, not tech jargon. You always know what's happening,
+            what's next, and why.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3><span class="dot" style="background:var(--accent-orange);" aria-hidden="true"></span>Fast turnaround</h3>
+          <p>
+            Reported bugs are tracked and handled immediately, not left in a queue. New work
+            moves in short steps, so you see progress every week.
+          </p>
         </div>
       </div>
     </div>
@@ -66,12 +87,41 @@ import CTA from '../components/CTA.astro';
 
   <section class="section section--dim">
     <div class="container">
+      <article class="card card--raised case">
+        <p class="case__client">
+          <a href="https://smashfactorlounge.com" rel="noopener">Smash Factor Lounge</a>
+          <span>· multi-location golf simulators</span>
+        </p>
+        <h2>The third attempt that shipped</h2>
+        <p class="muted">
+          Two developers before couldn't finish their booking platform. Omnipeak rebuilt it from
+          the ground up: reservations with time-based pricing, memberships with recurring billing,
+          and a structure ready for new locations.
+        </p>
+        <ul class="case-meta">
+          <li>Online booking</li>
+          <li>Memberships</li>
+          <li>Recurring billing</li>
+          <li>Multi-location</li>
+        </ul>
+        <div class="btn-row">
+          <a href="/work/" class="btn btn--ghost">Read the case study</a>
+        </div>
+      </article>
+      <p class="case__note muted">
+        Booking and billing is the hardest kind of small-business software. The work also ranges
+        from internal dashboards to automations that replace a weekly manual routine.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
       <SectionHeader
-        eyebrow="Who this is for"
-        title="Small businesses past what off-the-shelf software can do"
-        subtitle="Owners and operations leads who have hit the wall — the tool almost fits but not quite, the workaround has become the process, or a developer left a half-built system behind."
+        title="Small businesses whose tech has fallen behind"
+        subtitle="The tool almost fits but not quite, the workaround has become the process, or a developer left a half-built system behind."
       />
-      <ul class="clients">
+      <ul class="fits">
         <li>Outgrew spreadsheets</li>
         <li>Off-the-shelf almost fits</li>
         <li>Repetitive work done by hand</li>
@@ -79,62 +129,36 @@ import CTA from '../components/CTA.astro';
         <li>Data in five places</li>
         <li>Reports rebuilt every month</li>
       </ul>
-    </div>
-  </section>
-
-  <section class="section section--rule">
-    <div class="container">
-      <SectionHeader
-        eyebrow="The ground rules"
-        title="How you're protected"
-        subtitle="Most clients come to Omnipeak after a bad experience with a developer. These four rules apply to every project, in writing."
-      />
-      <div class="grid grid--2">
-        <div class="card">
-          <h3>You own everything</h3>
-          <p>
-            The code, the repository, the hosting, and the payment accounts are in your name
-            from day one. Nothing is held hostage if you ever part ways.
-          </p>
-        </div>
-        <div class="card">
-          <h3>You can run it</h3>
-          <p>
-            Every system ships with an admin screen built for a non-technical owner — change
-            prices, manage records, and see what's happening without calling a developer.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Documented handover</h3>
-          <p>
-            Written documentation comes with the system, so any competent developer could pick
-            it up tomorrow. You are never dependent on one person's memory.
-          </p>
-        </div>
-        <div class="card">
-          <h3>No lock-in</h3>
-          <p>
-            No proprietary platform and no monthly fee just to keep your own software running.
-            Ongoing maintenance is available for as long as you want it — and optional.
-          </p>
-        </div>
+      <div class="btn-row">
+        <a href={SCHEDULING_URL} class="btn btn--primary">Book an intro call</a>
       </div>
     </div>
   </section>
 
-  <section class="section section--rule">
+  <section class="section section--dim">
     <div class="container">
       <SectionHeader
-        eyebrow="Recent work"
-        title="The third attempt that shipped"
-        subtitle="A multi-location golf simulator business hired Omnipeak after two previous developers failed to finish their booking platform. The rebuild handles reservations with time-based pricing, memberships with recurring billing, and is structured for franchise growth."
+        title="If Omnipeak disappeared tomorrow, you'd still be fine"
+        subtitle="Many clients come to Omnipeak after a bad experience with a developer. These rules apply to every project, in writing."
       />
-      <p style="max-width: 44em; margin-bottom: var(--space-lg); color: var(--ink-soft);">
-        Booking and billing is the hardest kind of small-business software, and where Omnipeak
-        goes deepest — but the work ranges from internal dashboards to automations that replace
-        a weekly manual routine.
-      </p>
-      <a href="/work/" class="btn btn--ghost">Read the case study</a>
+      <div class="grid grid--2">
+        <div class="card">
+          <h3>You own everything</h3>
+          <p>Code, repository, hosting, and payment accounts are in your name from day one.</p>
+        </div>
+        <div class="card">
+          <h3>You can run it</h3>
+          <p>An admin screen built for a non-technical owner. Change prices and records yourself.</p>
+        </div>
+        <div class="card">
+          <h3>Documented handover</h3>
+          <p>Written documentation, so any competent developer could pick it up tomorrow.</p>
+        </div>
+        <div class="card">
+          <h3>No lock-in</h3>
+          <p>No proprietary platform, no fee just to keep your own software running.</p>
+        </div>
+      </div>
     </div>
   </section>
 
